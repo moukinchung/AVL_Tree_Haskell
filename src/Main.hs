@@ -18,15 +18,15 @@ balanceado Vazio = True
 balanceado (No l c r) | abs((altura l) - (altura r)) < 2 = True
                       | otherwise = False
 
-valor :: TreeAvl -> Int
+valor :: TreeAvl -> Int --Obtem o valor de filho
 valor Vazio = 0
 valor (No l c r) = c
 
-esquerda :: TreeAvl -> TreeAvl
+esquerda :: TreeAvl -> TreeAvl --Obtem o nó a esquerda
 esquerda Vazio = Vazio
 esquerda (No l c r) = l
 
-direita :: TreeAvl -> TreeAvl
+direita :: TreeAvl -> TreeAvl --Obtem o nó a direita
 direita Vazio = Vazio
 direita (No l c r) = r
 

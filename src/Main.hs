@@ -1,5 +1,7 @@
 import System.IO
+import Test.QuickCheck
 
+----Código da Arvore AVL----
 data TreeAvl = Vazio | No (TreeAvl) Int (TreeAvl)
                  deriving (Show, Eq)
 
@@ -62,6 +64,7 @@ rebalance (No l c r) | balanceado (No l c r) == True = (No l c r)
                      | alturalr == 2    && altura_l==1    = rotacaoLL (No l c r) --Rotacao Simples a direita
                      | alturalr == (-2) && altura_r==1    = rotacaoLR (No l c r) --Rotacao esquerda-direita (Dupla a esquerda)
                      | alturalr == 2    && altura_l==(-1) = rotacaoRL (No l c r) --Rotacao direita-esquerda (Dupla a direita)
+                     | otherwise = (No l c r)
                       where l_l = (esquerda l)
                             l_r = (direita l)
                             r_l = (esquerda r)
@@ -75,3 +78,24 @@ remover x Vazio              = Vazio
 remover x (No Vazio c Vazio) = if x == c then Vazio else (No Vazio c Vazio)
 remover x (No l c Vazio)     = if x == c then l else (No l c Vazio)
 remover x (No Vazio c r)     = if x == c then r else (No Vazio c r)
+remover x (No l c r)         | x == c = rebalance(No l c' r')
+                             | x < c = rebalance(No (remover x l) c r)
+                             | x > c = rebalance(No l c (remover x r))
+                             | otherwise = (No l c r)
+                               where c' = menorValor r
+                                     r' = remover c' r
+
+menorValor :: TreeAvl -> Int
+menorValor avl = head(geraLista avl)
+
+geraLista :: TreeAvl -> [Int]
+geraLista Vazio = []
+geraLista (No l c r) = geraLista l ++ [c] ++ geraLista r
+
+----Testes da Arvore AVL----
+
+geraAVL :: TreeAvl -> [Int] -> TreeAvl -- Gera uma Arvore AVL a partir de uma lista
+geraAVL t [] = t
+geraAVL t (x:xs) = inserir x (geraAVL t xs)
+
+----------------------------------

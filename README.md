@@ -226,8 +226,9 @@ Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
         Prelude> arvore = geraAVL Vazio [4,6,35,2,8]
         Prelude> print arvore
         No (No (No Vazio 2 Vazio) 4 (No Vazio 6 Vazio)) 8 (No Vazio 35 Vazio)
+    
     ![imagem_de_arvore](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore.png)
-###### Representação ilustrativa de arvore
+    ###### Representação ilustrativa de arvore
 
 - Inserindo os valores (0, 8, 45, 100, -95) a partir de arvore:
 

@@ -8,7 +8,7 @@ Para isso é necessário haver um mecanismo para que seja mantida essa proprieda
 
 Nessa estrutura de dado, cada elemento da árvore é considerado um nó, e a partir desse nó, haverá dois filhos, que poderão ser um outro nó, ou simplesmente um elemento vazio.
 
-Uma árvore é considerada balanceada se a partir do nó principal, a altura dos seus filhos diferem em módulo de até uma unidade, sendo que essa propriedade também é válida para cada sub-árvore.
+Uma árvore é considerada balanceada se a partir do nó principal, as alturas dos seus filhos diferem em módulo de até uma unidade, sendo que essa propriedade também é válida para cada sub-árvore.
 
 ## 2 - A implementação em Haskell
 
@@ -136,7 +136,7 @@ Se o valor for igual ao nó analisado, é retornado o próprio, não realizando 
 
 A função *altura* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **Int**.
 
-Essa função irá calcular a altura do nó junto com seus subnós, realizando assim também, o cálculo da altura de uma árvore avl.
+Essa função irá calcular a altura do nó junto com seus subnós, realizando assim também, o cálculo da altura de uma árvore AVL.
 
 Caso se recebe o **Vazio** é retornado **0**.
 
@@ -176,7 +176,7 @@ Caso contrário, é retornado a lista gerada pelo valor do nó atual com as conc
 
 A função *menorValor* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo genérico **a**.
 
-Essa função irá retornar o menor valor contido em um nó, sendo utilizada a função *geraLista* para recolher os valores desse nó e então usado a função *head* para pegar pegar o primeiro valor dessa lista, que é o menor de todos os valores.
+Essa função irá retornar o menor valor contido em um nó, sendo utilizada a função *geraLista* para recolher os valores desse nó e então usado a função *head* para pegar o primeiro valor dessa lista, que é o menor de todos os valores.
 
 ### Função geraAVL
 
@@ -233,8 +233,10 @@ Para remover o conteúdo de arvore, use o seguinte comando no ghci:
         Main> print arvore
         No (No (No Vazio 2 Vazio) 4 (No Vazio 6 Vazio)) 8 (No Vazio 35 Vazio)
     
-    ![imagem_de_arvore](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore.png)
-    ###### Representação ilustrativa de arvore
+    <figure>
+        <img src='https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore.png' alt='missing' />
+        <figcaption>Representação ilustrativa de arvore</figcaption>
+    </figure>
 
 - Inserindo os valores (0, 8, 45, 100, -95) a partir de arvore:
 
@@ -242,9 +244,11 @@ Para remover o conteúdo de arvore, use o seguinte comando no ghci:
         Main> print arvore1
         No (No (No Vazio (-95) Vazio) 0 (No Vazio 2 Vazio)) 4 (No (No Vazio 6 Vazio) 8 (No (No Vazio 35 Vazio) 45 (No Vazio 100 Vazio)))
 
-    ![imagem_de_arvore1](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore1.png)
-    ###### Representação ilustrativa de arvore1
-
+    <figure>
+        <img src='https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore1.png' alt='missing' />
+        <figcaption>Representação ilustrativa de arvore1</figcaption>
+    </figure>
+    
 - Inserindo os valores ("Maria", "Jefferson", "Vanessa", "Raquel", "Debora") em uma nova árvore nomes:
 
         Main> nomes = geraAVL Vazio ["Maria", "Jefferson", "Vanessa", "Raquel", "Debora"]
@@ -269,5 +273,7 @@ Para remover o conteúdo de arvore, use o seguinte comando no ghci:
         Main> print nomes1
         No (No Vazio "Debora" Vazio) "Maria" (No Vazio "Vanessa" Vazio)
         
-     ![imagem_da_arvore_nomes1](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes1.png)
-     ###### Representação ilustrativa de nomes1
+     <figure>
+        <img src='https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes1.png' alt='missing' />
+        <figcaption>Representação ilustrativa de nomes1</figcaption>
+    </figure>

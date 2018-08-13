@@ -252,6 +252,13 @@ Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
     ![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)
     ###### Representação ilustrativa de nomes
 
+- Buscando os valores "Raquel" e "Mariana" em nomes:
+    
+        Main> busca "Rachel" nomes
+        True
+        Main> busca "Mariana" nomes
+        False
+
 - Removendo os valores ("Raquel", "Jefferson") de nomes:
         
         Main> nomes1 = removerAVL nomes ["Raquel", "Jefferson"]

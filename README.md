@@ -232,18 +232,18 @@ Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
 
 - Inserindo os valores (0, 8, 45, 100, -95) a partir de arvore:
 
-    Main> arvore1 = geraAVL arvore [0, 8, 45, 100, -95]
-    Main> print arvore1
-    No (No (No Vazio (-95) Vazio) 0 (No Vazio 2 Vazio)) 4 (No (No Vazio 6 Vazio) 8 (No (No Vazio 35 Vazio) 45 (No Vazio 100 Vazio)))
+        Main> arvore1 = geraAVL arvore [0, 8, 45, 100, -95]
+        Main> print arvore1
+        No (No (No Vazio (-95) Vazio) 0 (No Vazio 2 Vazio)) 4 (No (No Vazio 6 Vazio) 8 (No (No Vazio 35 Vazio) 45 (No Vazio 100 Vazio)))
 
-![imagem_de_arvore1](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore1.png)
-###### Representação ilustrativa de arvore1
+    ![imagem_de_arvore1](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore1.png)
+    ###### Representação ilustrativa de arvore1
 
 - Inserindo os valores ("Vanessa","Raquel", "Debora", "Maria", "Jefferson") em uma nova árvore nomes:
 
-    Prelude> nomes = geraAVL Vazio ["Vanessa","Raquel", "Debora", "Maria", "Jefferson"]
-    Prelude> print nomes
-    No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
+        Prelude> nomes = geraAVL Vazio ["Vanessa","Raquel", "Debora", "Maria", "Jefferson"]
+        Prelude> print nomes
+        No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
 
-![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)
-###### Representação ilustrativa de nomes
+    ![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)
+    ###### Representação ilustrativa de nomes

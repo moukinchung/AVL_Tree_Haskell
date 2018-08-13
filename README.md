@@ -228,11 +228,4 @@ Inserindo os valores ("Vanessa", "Maria", "Debora" ) em uma nova árvore:
     Prelude> print nomes
     No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
 
-
-```mermaid
-graph TD
-Maria --> Jefferson
-Raquel --> Vanessa
-Jefferson --> Débora
-Maria --> Raquel
-```
+![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)

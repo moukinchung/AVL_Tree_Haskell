@@ -22,8 +22,11 @@ Para a implementação na linguagem Haskell, foi criado um novo tipo de dado par
     busca :: (Ord a, Eq a) => a -> TreeAvl a -> Bool
 
 A função busca recebe um valor do tipo genérico a e um valor do tipo TreeAvl, e retorna um booleano.
+
 Essa função irá realizar a busca do valor na árvore.
+
 Caso a busca seja feita em uma árvore ou nó vazio, é retornado False.
+
 Caso contrário, se o valor a ser procurado é igual ao nó, é retornado True, senão, é realizado a busca recursiva em um de seus filhos, dependendo da comparação da ordem entre os valores.
 
 ### Função valor
@@ -128,8 +131,11 @@ Se o valor for igual ao nó analisado, é retornado o próprio, não realizando 
     altura :: (Ord a, Eq a) => TreeAvl a -> Int**==
 
 A função altura recebe um valor do tipo TreeAvl e retorna um valor do tipo Int.
-Essa função irá calcular a altura do nó junto com seus subnós, realizando assim também, o cálculo da altura de uma árvore avl.
+
+Essa função irá calcular a altura do nó junto com seus subnós, realizando assim também, o cálculo da altura de uma árvore AVL.
+
 Caso se recebe o Vazio é retornado 0.
+
 Caso contrário, é retornado a soma de 1 com o maior valor das alturas dos filhos à esquerda e à esquerda.
 
 ### Função rebalance
@@ -145,8 +151,11 @@ Caso contrário, é retornado a soma de 1 com o maior valor das alturas dos filh
     geraLista :: (Ord a, Eq a) => TreeAvl a -> [a]
 
 A função geraLista recebe um valor do tipo TreeAvl e retorna uma lista do tipo genérico a.
+
 Essa função irá retornar os valores contidos na árvore AVL em formato de lista, partindo do valor que está mais à esquerda até o valor mais à direita, ou seja, irá retornar os valores em ordem de grandeza.
+
 Caso se receba um valor vazio, é retornado uma lista vazia.
+
 Caso contrário, é retornado a lista gerada pelo valor do nó atual com as concatenações das listas geradas recursivamentes dos filhos à esquerda e a direita.
 
 ### Função menorValor
@@ -154,6 +163,7 @@ Caso contrário, é retornado a lista gerada pelo valor do nó atual com as conc
     menorValor :: (Ord a, Eq a) => TreeAvl a -> a
 
 A função menorValor recebe um valor do tipo TreeAvl e retorna um valor do tipo genérico a.
+
 Essa função irá retornar o menor valor contido em um nó, sendo utilizada a função geraLista para recolher os valores desse nó e então usado a função head para pegar pegar o primeiro valor dessa lista, que é o menor de todos os valores.
 
 ### Função geraAVL
@@ -161,8 +171,11 @@ Essa função irá retornar o menor valor contido em um nó, sendo utilizada a f
     geraAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a-
 
 A função geraAVL recebe um valor do tipo TreeAvl e uma lista do tipo genérico a.
+
 Essa função irá inserir na árvore os valores contidos na lista.
+
 Caso se receba uma lista vazia, é retornada a árvore sem modificação.
+
 Caso contrário, ...
 
 ### Função removerAVL
@@ -170,8 +183,11 @@ Caso contrário, ...
     removerAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a
 
 A função removerAVL recebe um valor do tipo TreeAvl e uma lista do tipo genérico a.
+
 Essa função irá remover da árvore os valores contidos na lista, desde que estes estejam na árvore.
+
 Caso se receba uma lista vazia, é retornada a árvore sem modificação.
+
 Caso contrário, ….
 
 ## 3 - Como gerar uma árvore

@@ -253,9 +253,6 @@ Para remover o conteúdo de arvore, use o seguinte comando no ghci:
         <img src='https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png' alt='missing' />
         <figcaption>Representação ilustrativa de nomes</figcaption>
     </figure>
-    
-    ![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)
-    ###### Representação ilustrativa de nomes
 
 - Buscando os valores "Raquel" e "Mariana" em nomes:
     

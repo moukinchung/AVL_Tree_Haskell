@@ -254,7 +254,7 @@ Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
 
 - Buscando os valores "Raquel" e "Mariana" em nomes:
     
-        Main> busca "Rachel" nomes
+        Main> busca "Raquel" nomes
         True
         Main> busca "Mariana" nomes
         False

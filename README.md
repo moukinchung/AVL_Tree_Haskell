@@ -25,7 +25,7 @@ Como foi definido com o tipo genérico ‘**a**’, é possível usar essa imple
 
     busca :: (Ord a, Eq a) => a -> TreeAvl a -> Bool
 
-A função *busca* recebe um valor do tipo genérico *a* e um valor do tipo **TreeAvl**, e retorna um **bool**.
+A função *busca* recebe um valor do tipo genérico **a** e um valor do tipo **TreeAvl**, e retorna um **bool**.
 
 Essa função irá realizar a busca do valor na árvore.
 

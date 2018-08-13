@@ -2,7 +2,9 @@
 
 ## 1 - Conceitualização
 
-A Árvore Adelson-Velskii e Landis (AVL) é uma árvore de busca binária balanceada que minimiza o número de comparações efetuadas no pior caso para uma busca nessa árvore. Para isso é necessário haver um mecanismo para que seja mantida essa propriedade na árvore a cada inserção ou remoção.
+A Árvore Adelson-Velskii e Landis (AVL) é uma árvore de busca binária balanceada que minimiza o número de comparações efetuadas no pior caso para uma busca nessa árvore.
+
+Para isso é necessário haver um mecanismo para que seja mantida essa propriedade na árvore a cada inserção ou remoção.
 
 Para essa estrutura de dado, cada elemento da árvore é considerado um nó, e a partir desse nó, haverá dois filhos, que poderão ser um outro nó, ou simplesmente um elemento vazio.
 
@@ -132,7 +134,7 @@ Se o valor for igual ao nó analisado, é retornado o próprio, não realizando 
 
 A função altura recebe um valor do tipo TreeAvl e retorna um valor do tipo Int.
 
-Essa função irá calcular a altura do nó junto com seus subnós, realizando assim também, o cálculo da altura de uma árvore AVL.
+Essa função irá calcular a altura do nó junto com seus subnós, realizando assim também, o cálculo da altura de uma árvore avl.
 
 Caso se recebe o Vazio é retornado 0.
 
@@ -156,7 +158,7 @@ Essa função irá retornar os valores contidos na árvore AVL em formato de lis
 
 Caso se receba um valor vazio, é retornado uma lista vazia.
 
-Caso contrário, é retornado a lista gerada pelo valor do nó atual com as concatenações das listas geradas recursivamentes dos filhos à esquerda e a direita.
+Caso contrário, é retornado a lista gerada pelo valor do nó atual com as concatenações das listas geradas recursivamente dos filhos à esquerda e a direita.
 
 ### Função menorValor
 
@@ -176,7 +178,7 @@ Essa função irá inserir na árvore os valores contidos na lista.
 
 Caso se receba uma lista vazia, é retornada a árvore sem modificação.
 
-Caso contrário, ...
+Caso contrário, é chamada a função inserir e é passado o primeiro elemento da lista com a arvore gerada recursivamente da árvore recebida com o restante da lista.
 
 ### Função removerAVL
 
@@ -188,7 +190,7 @@ Essa função irá remover da árvore os valores contidos na lista, desde que es
 
 Caso se receba uma lista vazia, é retornada a árvore sem modificação.
 
-Caso contrário, ….
+Caso contrário, é chamada a função remover e é passado o primeiro elemento da lista com a arvore gerada recursivamente da árvore recebida com o restante da lista.
 
 ## 3 - Como gerar uma árvore
 
@@ -197,3 +199,12 @@ Para criar uma árvore, use a seguinte sintaxe no ghci:
 
 ## 4 - Exemplos do uso
 
+
+
+```mermaid
+graph TD
+Raquel --> Jefferson
+Raquel --> Vanessa
+Jefferson --> Débora
+Jefferson --> Maria
+```

@@ -152,12 +152,3 @@ Para criar uma árvore, use a seguinte sintaxe no ghci:
 
 ## 4 - Exemplos do uso
 
-
-
-```mermaid
-graph TD
-Raquel --> Jefferson
-Raquel --> Vanessa
-Jefferson --> Débora
-Jefferson --> Maria
-```

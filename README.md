@@ -250,8 +250,7 @@ Para remover o conteúdo de arvore, use o seguinte comando no ghci:
         No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
 
     <p align="center">
-      <img src="https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png" width="350" title="Representação ilustrativa de nomes">
-      <img src="your_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+      <img src="https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png" title="Representação ilustrativa de nomes">
     </p>
     
     ![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)

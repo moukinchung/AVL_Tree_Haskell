@@ -144,9 +144,17 @@ Caso contrário, é retornado a soma de 1 com o maior valor das alturas dos filh
 
     rebalance :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
+A função rebalance irá receber um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+
+Essa função irá chamar as funções de rotação caso necessário.
+
 ### Função remover
 
     remover :: (Ord a, Eq a) => a -> TreeAvl a -> TreeAvl a
+
+A função remover irá receber um valor do tipo genérico a e um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+
+Essa função ira remover o valor na arvore caso esse se encontre, se não irá devolver a árvore intacta.
 
 ### Função geraLista
 

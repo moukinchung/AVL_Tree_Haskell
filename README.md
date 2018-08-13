@@ -206,19 +206,19 @@ Para usar a implementação, entre dentro da pasta principal e abra o Terminal d
     
     stack ghci src/Main.hs
 
-Para criar uma árvore, use a seguinte sintaxe no ghci:
+Para criar uma árvore, use o seguinte comando no ghci:
 
     Main> arvore = geraAVL Vazio [--Conteúdo da lista--]
 
-Para imprimir o conteúdo da árvore, use a seguinte sintaxe no ghci:
+Para imprimir o conteúdo de arvore, use o seguinte comando no ghci:
 
     Main> print arvore
 
-Para verificar se um valor está na arvore, use a seguinte sintaxe no ghci:
+Para verificar se um valor está em arvore, use o seguinte comando no ghci:
 
     Main> busca valor arvore
 
-Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
+Para remover o conteúdo de arvore, use o seguinte comando no ghci:
 
     Main> removerAVL arvore [--Conteúdo da lista--] 
 

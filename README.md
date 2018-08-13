@@ -230,10 +230,16 @@ Inserindo os valores (4, 6, 35, 2, 8) em uma nova árvore:
 ![imagem_de_arvore](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore.png)
 ###### Representação ilustrativa de arvore
 
-Inserindo os valores (0, 8, 100, -95) em arvore
+Inserindo os valores (0, 8, 45, 100, -95) a partir de arvore:
 
+    Main> arvore1 = geraAVL arvore [0, 8, 45, 100, -95]
+    Main> print arvore1
+    No (No (No Vazio (-95) Vazio) 0 (No Vazio 2 Vazio)) 4 (No (No Vazio 6 Vazio) 8 (No (No Vazio 35 Vazio) 45 (No Vazio 100 Vazio)))
 
-Inserindo os valores ("Vanessa","Raquel", "Debora", "Maria", "Jefferson") em uma nova árvore:
+![imagem_de_arvore1](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore1.png)
+###### Representação ilustrativa de arvore1
+
+Inserindo os valores ("Vanessa","Raquel", "Debora", "Maria", "Jefferson") em uma nova árvore nomes:
 
     Prelude> nomes = geraAVL Vazio ["Vanessa","Raquel", "Debora", "Maria", "Jefferson"]
     Prelude> print nomes

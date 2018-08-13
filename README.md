@@ -202,6 +202,10 @@ Caso contrário, é chamada a função remover e é passado o primeiro elemento 
 
 ## 3 - Manipulando a árvore AVL
 
+Para usar a implementação, entre dentro da pasta principal e abra o Terminal do Linux ou o cmd/Windows PowerShell no Windows e utilize o seguinte comando:
+    
+    stack ghci src/Main.hs
+
 Para criar uma árvore, use a seguinte sintaxe no ghci:
 
     Prelude> arvore = geraAVL Vazio [--Conteúdo da lista--]

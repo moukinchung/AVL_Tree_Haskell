@@ -229,3 +229,4 @@ Inserindo os valores ("Vanessa", "Maria", "Debora" ) em uma nova árvore:
     No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
 
 ![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)
+Representação ilustrativa de nomes

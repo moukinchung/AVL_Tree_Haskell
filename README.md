@@ -19,6 +19,8 @@ Para a implementação na linguagem Haskell, foi criado um novo tipo de dado par
     data TreeAvl a = Vazio | No (TreeAvl a) a (TreeAvl a)
                      deriving (Show, Eq, Ord)
 
+Como foi definido com o tipo genérico ‘**a**’, é possível usar essa implementação tanto para tipos numéricos (Int, Integer, Float, Double) ou do tipo caractere (Char, String), assim como do tipo lista ou tupla.
+
 ### Função busca
 
     busca :: (Ord a, Eq a) => a -> TreeAvl a -> Bool

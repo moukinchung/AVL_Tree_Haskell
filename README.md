@@ -221,7 +221,7 @@ Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
 
 ## 4 - Exemplos do uso
 
-Inserindo os valores (4, 6, 35, 2, 8) em uma nova árvore:
+- Inserindo os valores (4, 6, 35, 2, 8) em uma nova árvore:
 
     Prelude> arvore = geraAVL Vazio [4,6,35,2,8]
     Prelude> print arvore
@@ -230,7 +230,7 @@ Inserindo os valores (4, 6, 35, 2, 8) em uma nova árvore:
 ![imagem_de_arvore](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore.png)
 ###### Representação ilustrativa de arvore
 
-Inserindo os valores (0, 8, 45, 100, -95) a partir de arvore:
+- Inserindo os valores (0, 8, 45, 100, -95) a partir de arvore:
 
     Main> arvore1 = geraAVL arvore [0, 8, 45, 100, -95]
     Main> print arvore1
@@ -239,7 +239,7 @@ Inserindo os valores (0, 8, 45, 100, -95) a partir de arvore:
 ![imagem_de_arvore1](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore1.png)
 ###### Representação ilustrativa de arvore1
 
-Inserindo os valores ("Vanessa","Raquel", "Debora", "Maria", "Jefferson") em uma nova árvore nomes:
+- Inserindo os valores ("Vanessa","Raquel", "Debora", "Maria", "Jefferson") em uma nova árvore nomes:
 
     Prelude> nomes = geraAVL Vazio ["Vanessa","Raquel", "Debora", "Maria", "Jefferson"]
     Prelude> print nomes

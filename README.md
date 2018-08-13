@@ -239,9 +239,9 @@ Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
     ![imagem_de_arvore1](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore1.png)
     ###### Representação ilustrativa de arvore1
 
-- Inserindo os valores ("Vanessa","Raquel", "Debora", "Maria", "Jefferson") em uma nova árvore nomes:
+- Inserindo os valores ("Maria", "Jefferson", "Vanessa", "Raquel", "Debora") em uma nova árvore nomes:
 
-        Prelude> nomes = geraAVL Vazio ["Vanessa","Raquel", "Debora", "Maria", "Jefferson"]
+        Prelude> nomes = geraAVL Vazio ["Maria", "Jefferson", "Vanessa", "Raquel", "Debora"]
         Prelude> print nomes
         No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
 

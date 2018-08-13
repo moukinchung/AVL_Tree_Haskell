@@ -23,28 +23,28 @@ Para a implementação na linguagem Haskell, foi criado um novo tipo de dado par
 
     busca :: (Ord a, Eq a) => a -> TreeAvl a -> Bool
 
-A função busca recebe um valor do tipo genérico a e um valor do tipo TreeAvl, e retorna um booleano.
+A função busca recebe um valor do tipo genérico *a* e um valor do tipo **TreeAvl**, e retorna um **bool**.
 
 Essa função irá realizar a busca do valor na árvore.
 
-Caso a busca seja feita em uma árvore ou nó vazio, é retornado False.
+Caso a busca seja feita em uma árvore ou nó vazio, é retornado **False**.
 
-Caso contrário, se o valor a ser procurado é igual ao nó, é retornado True, senão, é realizado a busca recursiva em um de seus filhos, dependendo da comparação da ordem entre os valores.
+Caso contrário, se o valor a ser procurado é igual ao nó, é retornado **True**, senão, é realizado a busca recursiva em um de seus filhos, dependendo da comparação da ordem entre os valores.
 
 ### Função valor
 
     valor :: (Ord a, Eq a) => TreeAvl a -> a
 
-A função valor recebe um valor do tipo TreeAvl e retorna um valor do tipo genérico a.
+A função valor recebe um valor do tipo **TreeAvl** e retorna um valor do tipo genérico **a**.
 
 O valor retornado é o do nó recebido.
 
 ### Função esquerda
 
     esquerda :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
-A função esquerda recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função esquerda recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
-Caso recebam um Vazio, é retornado um Vazio.
+Caso recebam um **Vazio**, é retornado um **Vazio**.
 
 Caso contrário, é retornado o nó à esquerda.
 
@@ -52,9 +52,9 @@ Caso contrário, é retornado o nó à esquerda.
 
     direita :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função direita recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função direita recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
-Caso recebam um Vazio, é retornado um Vazio.
+Caso recebam um **Vazio**, é retornado um **Vazio**.
 
 Caso contrário, é retornado o nó à direita.
 
@@ -62,13 +62,13 @@ Caso contrário, é retornado o nó à direita.
 
     rotacaoLL :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rotacaoLL recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função rotacaoLL recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá executar a rotação LL, ou seja, a rotação simples à direita.
 
-Caso receba um Vazio, é retornado Vazio.
+Caso receba um **Vazio**, é retornado **Vazio**.
 
-Caso receba um nó com filhos Vazio, é retornado o próprio nó.
+Caso receba um nó com filhos **Vazio**, é retornado o próprio nó.
 
 Caso contrário, irá retornar o nó rotacionado.
 
@@ -76,13 +76,13 @@ Caso contrário, irá retornar o nó rotacionado.
 
     rotacaoRR :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rotacaoRR recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função rotacaoRR recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá executar a rotação RR, ou seja, a rotação simples à esquerda.
 
-Caso receba um Vazio, é retornado Vazio.
+Caso receba um **Vazio**, é retornado **Vazio**.
 
-Caso receba um nó com filhos Vazio, é retornado o próprio nó.
+Caso receba um nó com filhos **Vazio**, é retornado o próprio nó.
 
 Caso contrário, irá retornar o nó rotacionado.
 
@@ -90,13 +90,13 @@ Caso contrário, irá retornar o nó rotacionado.
 
     rotacaoLR :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rotacaoLR recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função rotacaoLR recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá executar a rotação LR, ou seja, a rotação dupla à direita.
 
-Caso receba um Vazio, é retornado Vazio.
+Caso receba um **Vazio**, é retornado **Vazio**.
 
-Caso receba um nó com filhos Vazio, é retornado o próprio nó.
+Caso receba um nó com filhos **Vazio**, é retornado o próprio nó.
 
 Caso contrário, irá retornar o nó rotacionado.
 
@@ -104,13 +104,13 @@ Caso contrário, irá retornar o nó rotacionado.
 
     rotacaoRL :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rotacaoRL recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função rotacaoRL recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá executar a rotação RL, ou seja, a rotação dupla à esquerda.
 
-Caso receba um Vazio, é retornado Vazio.
+Caso receba um **Vazio**, é retornado **Vazio**.
 
-Caso receba um nó com filhos Vazio, é retornado o próprio nó.
+Caso receba um nó com filhos **Vazio**, é retornado o próprio nó.
 
 Caso contrário, irá retornar o nó rotacionado.
 
@@ -118,11 +118,11 @@ Caso contrário, irá retornar o nó rotacionado.
 
     inserir :: (Ord a, Eq a) => a -> TreeAvl a -> TreeAvl a
 
-A função inserir recebe um valor do tipo genérico a e um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função inserir recebe um valor do tipo genérico **a** e um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá inserir o valor recebido na árvore.
 
-Caso o valor recebido seja inserido em Vazio, será criado um nó com o valor e dois filhos vazios.
+Caso o valor recebido seja inserido em **Vazio**, será criado um nó com o valor e dois filhos vazios.
 
 Caso contrário, dependendo da ordem entre o valor recebido e do nó, será inserido ou a direita ou à esquerda do nó atual recursivamente, fazendo logo após o rebalanceamento desse nó e então retornado. 
 

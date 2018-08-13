@@ -132,11 +132,11 @@ Se o valor for igual ao nó analisado, é retornado o próprio, não realizando 
 
     altura :: (Ord a, Eq a) => TreeAvl a -> Int**==
 
-A função altura recebe um valor do tipo TreeAvl e retorna um valor do tipo Int.
+A função altura recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **Int**.
 
 Essa função irá calcular a altura do nó junto com seus subnós, realizando assim também, o cálculo da altura de uma árvore avl.
 
-Caso se recebe o Vazio é retornado 0.
+Caso se recebe o **Vazio** é retornado **0**.
 
 Caso contrário, é retornado a soma de 1 com o maior valor das alturas dos filhos à esquerda e à esquerda.
 
@@ -144,7 +144,7 @@ Caso contrário, é retornado a soma de 1 com o maior valor das alturas dos filh
 
     rebalance :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rebalance irá receber um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função rebalance irá receber um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá chamar as funções de rotação caso necessário.
 
@@ -152,7 +152,7 @@ Essa função irá chamar as funções de rotação caso necessário.
 
     remover :: (Ord a, Eq a) => a -> TreeAvl a -> TreeAvl a
 
-A função remover irá receber um valor do tipo genérico a e um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função remover irá receber um valor do tipo genérico **a** e um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função ira remover o valor na arvore caso esse se encontre, se não irá devolver a árvore intacta.
 
@@ -160,11 +160,11 @@ Essa função ira remover o valor na arvore caso esse se encontre, se não irá 
 
     geraLista :: (Ord a, Eq a) => TreeAvl a -> [a]
 
-A função geraLista recebe um valor do tipo TreeAvl e retorna uma lista do tipo genérico a.
+A função geraLista recebe um valor do tipo **TreeAvl** e retorna uma lista do tipo genérico **a**.
 
 Essa função irá retornar os valores contidos na árvore AVL em formato de lista, partindo do valor que está mais à esquerda até o valor mais à direita, ou seja, irá retornar os valores em ordem de grandeza.
 
-Caso se receba um valor vazio, é retornado uma lista vazia.
+Caso se receba um **Vazio**, é retornado uma lista vazia.
 
 Caso contrário, é retornado a lista gerada pelo valor do nó atual com as concatenações das listas geradas recursivamente dos filhos à esquerda e a direita.
 
@@ -172,15 +172,15 @@ Caso contrário, é retornado a lista gerada pelo valor do nó atual com as conc
 
     menorValor :: (Ord a, Eq a) => TreeAvl a -> a
 
-A função menorValor recebe um valor do tipo TreeAvl e retorna um valor do tipo genérico a.
+A função menorValor recebe um valor do tipo **TreeAvl** e retorna um valor do tipo genérico **a**.
 
-Essa função irá retornar o menor valor contido em um nó, sendo utilizada a função geraLista para recolher os valores desse nó e então usado a função head para pegar pegar o primeiro valor dessa lista, que é o menor de todos os valores.
+Essa função irá retornar o menor valor contido em um nó, sendo utilizada a função **geraLista** para recolher os valores desse nó e então usado a função **head** para pegar pegar o primeiro valor dessa lista, que é o menor de todos os valores.
 
 ### Função geraAVL
 
     geraAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a
 
-A função geraAVL recebe um valor do tipo TreeAvl e uma lista do tipo genérico a.
+A função geraAVL recebe um valor do tipo **TreeAvl** e uma lista do tipo genérico **a**.
 
 Essa função irá inserir na árvore os valores contidos na lista.
 
@@ -192,7 +192,7 @@ Caso contrário, é chamada a função inserir e é passado o primeiro elemento 
 
     removerAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a
 
-A função removerAVL recebe um valor do tipo TreeAvl e uma lista do tipo genérico a.
+A função removerAVL recebe um valor do tipo **TreeAvl** e uma lista do tipo genérico **a**.
 
 Essa função irá remover da árvore os valores contidos na lista, desde que estes estejam na árvore.
 
@@ -228,18 +228,16 @@ Inserindo os valores (4, 6, 35, 2, 8) em uma nova árvore:
     No (No (No Vazio 2 Vazio) 4 (No Vazio 6 Vazio)) 8 (No Vazio 35 Vazio)
     
 ![imagem_de_arvore](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore.png)
-
 ###### Representação ilustrativa de arvore
 
 Inserindo os valores (0, 8, 100, -95) em arvore
 
 
-Inserindo os valores ("Vanessa", "Maria", "Debora" ) em uma nova árvore:
+Inserindo os valores ("Vanessa","Raquel", "Debora", "Maria", "Jefferson") em uma nova árvore:
 
     Prelude> nomes = geraAVL Vazio ["Vanessa","Raquel", "Debora", "Maria", "Jefferson"]
     Prelude> print nomes
     No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
 
 ![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)
-
 ###### Representação ilustrativa de nomes

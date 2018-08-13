@@ -250,9 +250,9 @@ Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
 
 - Removendo os valores ("Raquel", "Jefferson") de nomes:
         
-        nomes1 = removerAVL nomes ["Raquel", "Jefferson"]
-        print nomes1
+        Prelude> nomes1 = removerAVL nomes ["Raquel", "Jefferson"]
+        Prelude> print nomes1
         No (No Vazio "Debora" Vazio) "Maria" (No Vazio "Vanessa" Vazio)
         
      ![imagem_da_arvore_nomes1](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes1.png)
-    ###### Representação ilustrativa de nomes1
+     ###### Representação ilustrativa de nomes1

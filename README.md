@@ -23,9 +23,7 @@ Para a implementação na linguagem Haskell, foi criado um novo tipo de dado par
 
 A função busca recebe um valor do tipo genérico a e um valor do tipo TreeAvl, e retorna um booleano.
 Essa função irá realizar a busca do valor na árvore.
-
 Caso a busca seja feita em uma árvore ou nó vazio, é retornado False.
-
 Caso contrário, se o valor a ser procurado é igual ao nó, é retornado True, senão, é realizado a busca recursiva em um de seus filhos, dependendo da comparação da ordem entre os valores.
 
 ### Função valor

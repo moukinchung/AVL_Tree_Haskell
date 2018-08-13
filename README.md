@@ -6,9 +6,9 @@ A Árvore Adelson-Velskii e Landis (AVL) é uma árvore de busca binária balanc
 
 Para isso é necessário haver um mecanismo para que seja mantida essa propriedade na árvore a cada inserção ou remoção.
 
-Para essa estrutura de dado, cada elemento da árvore é considerado um nó, e a partir desse nó, haverá dois filhos, que poderão ser um outro nó, ou simplesmente um elemento vazio.
+Nessa estrutura de dado, cada elemento da árvore é considerado um nó, e a partir desse nó, haverá dois filhos, que poderão ser um outro nó, ou simplesmente um elemento vazio.
 
-Uma árvore é considerada balanceada se a partir do nó principal, a altura dos seus filhos diferem em módulo de até uma unidade, sendo que essa propriedade também é válida para cada subárvore.
+Uma árvore é considerada balanceada se a partir do nó principal, a altura dos seus filhos diferem em módulo de até uma unidade, sendo que essa propriedade também é válida para cada sub-árvore.
 
 ## 2 - A implementação em Haskell
 

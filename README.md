@@ -224,9 +224,10 @@ Inserindo os valores (0, 8, 100, -95) em arvore
 
 Inserindo os valores ("Vanessa", "Maria", "Debora" ) em uma nova árvore:
 
-    Prelude> nomes = geraAVL Vazio ["Vanessa", "Debora", "Maria", "Raquel", "Jefferson"]
+    Prelude> nomes = geraAVL Vazio ["Vanessa","Raquel", "Debora", "Maria", "Jefferson"]
     Prelude> print nomes
-    No (No (No Vazio "Debora" Vazio) "Jefferson" Vazio) "Maria" (No Vazio "Raquel" (No Vazio "Vanessa" Vazio))
+    No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
+
 
 ```mermaid
 graph TD

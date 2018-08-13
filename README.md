@@ -130,7 +130,7 @@ Se o valor for igual ao nó analisado, é retornado o próprio, não realizando 
 
 ### Função altura
 
-    altura :: (Ord a, Eq a) => TreeAvl a -> Int**==
+    altura :: (Ord a, Eq a) => TreeAvl a -> Int
 
 A função *altura* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **Int**.
 

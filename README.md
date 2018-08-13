@@ -1,136 +1,163 @@
-Árvore AVL - Implementação em Haskell
+# **Árvore AVL - Implementação em Haskell**
 
-1 - Conceitualização
+## 1 - Conceitualização
 
 A Árvore Adelson-Velskii e Landis (AVL) é uma árvore de busca binária balanceada que minimiza o número de comparações efetuadas no pior caso para uma busca nessa árvore. Para isso é necessário haver um mecanismo para que seja mantida essa propriedade na árvore a cada inserção ou remoção.
 Para essa estrutura de dado, cada elemento da árvore é considerado um nó, e a partir desse nó, haverá dois filhos, que poderão ser um outro nó, ou simplesmente um elemento vazio.
 Uma árvore é considerada balanceada se a partir do nó principal, a altura dos seus filhos diferem em módulo de até uma unidade, sendo que essa propriedade também é válida para cada subárvore.
 
-2 - A implementação em Haskell
+## 2 - A implementação em Haskell
 
--O Tipo
+### O Tipo
 
 Para a implementação na linguagem Haskell, foi criado um novo tipo de dado para representar o nó do elemento com seus dois filhos, além de também poder representar o nó vazio:
 
-data TreeAvl a = Vazio | No (TreeAvl a) a (TreeAvl a)
-                            deriving (Show, Eq, Ord)
+    data TreeAvl a = Vazio | No (TreeAvl a) a (TreeAvl a)
+                     deriving (Show, Eq, Ord)
 
-Como foi definido com o tipo genérico ‘a’, é possível usar essa implementação tanto para tipos numéricos (Int, Integer, Float, Double) ou do tipo caractere (Char, String), assim como do tipo lista ou tupla.
+### Função busca
 
--Função busca
-
-busca :: (Ord a, Eq a) => a -> TreeAvl a -> Bool
+    busca :: (Ord a, Eq a) => a -> TreeAvl a -> Bool
 
 A função busca recebe um valor do tipo genérico a e um valor do tipo TreeAvl, e retorna um booleano.
 Essa função irá realizar a busca do valor na árvore.
-Caso a busca seja feita em uma árvore ou nó vazio, é retornado False
+Caso a busca seja feita em uma árvore ou nó vazio, é retornado False  
 Caso contrário, se o valor a ser procurado é igual ao nó, é retornado True, senão, é realizado a busca recursiva em um de seus filhos, dependendo da comparação da ordem entre os valores.
 
-
--Função valor
+### Função valor
 
-valor :: (Ord a, Eq a) => TreeAvl a -> a 
+    valor :: (Ord a, Eq a) => TreeAvl a -> a
 
 A função valor recebe um valor do tipo TreeAvl e retorna um valor do tipo genérico a.
 O valor retornado é o do nó recebido.
+### Função esquerda
 
--Função esquerda
-
-esquerda :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
-
+    esquerda :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 A função esquerda recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
 Caso recebam um Vazio, é retornado um Vazio.
 Caso contrário, é retornado o nó à esquerda.
 
--Função direita
+### Função direita
 
-direita :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
+    direita :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-As função direita recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
+A função direita recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
 Caso recebam um Vazio, é retornado um Vazio.
 Caso contrário, é retornado o nó à direita.
 
--Função rotacaoLL
+### Função rotacaoLL
 
-rotacaoLL :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
+    rotacaoLL :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
 A função rotacaoLL recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
 Essa função irá executar a rotação LL, ou seja, a rotação simples à direita.
 Caso receba um Vazio, é retornado Vazio.
 Caso receba um nó com filhos Vazio, é retornado o próprio nó.
-Caso contrário, irá retornar o nó rotacionado.
+Caso contrário, irá retornar o nó rotacionado
 
--Função rotacaoRR
+### Função rotacaoRR
 
-rotacaoRR :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
+    rotacaoRR :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
 A função rotacaoRR recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
-Essa função irá executar a rotação LL, ou seja, a rotação simples à esquerda.
+Essa função irá executar a rotação RR, ou seja, a rotação simples à esquerda.
 Caso receba um Vazio, é retornado Vazio.
 Caso receba um nó com filhos Vazio, é retornado o próprio nó.
-Caso contrário, irá retornar o nó rotacionado.
+Caso contrário, irá retornar o nó rotacionado
 
--Função rotacaoLR
+### Função rotacaoLR
 
-rotacaoLR :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
+    rotacaoLR :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
 A função rotacaoLR recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
 Essa função irá executar a rotação LR, ou seja, a rotação dupla à direita.
 Caso receba um Vazio, é retornado Vazio.
 Caso receba um nó com filhos Vazio, é retornado o próprio nó.
-Caso contrário, irá retornar o nó rotacionado.
+Caso contrário, irá retornar o nó rotacionado
 
--Função rotacaoRL
+### Função rotacaoRL
 
-rotacaoRL :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
+    rotacaoRL :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
 A função rotacaoRL recebe um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
 Essa função irá executar a rotação RL, ou seja, a rotação dupla à esquerda.
 Caso receba um Vazio, é retornado Vazio.
 Caso receba um nó com filhos Vazio, é retornado o próprio nó.
-Caso contrário, irá retornar o nó rotacionado.
+Caso contrário, irá retornar o nó rotacionado
 
--Função inserir
+### Função inserir
 
-inserir :: (Ord a, Eq a) => a -> TreeAvl a-> TreeAvl a
+    inserir :: (Ord a, Eq a) => a -> TreeAvl a -> TreeAvl a
 
 A função inserir recebe um valor do tipo genérico a e um valor do tipo TreeAvl e retorna um valor do tipo TreeAvl.
 Essa função irá inserir o valor recebido na árvore.
 Caso o valor recebido seja inserido em Vazio, será criado um nó com o valor e dois filhos vazios.
 Caso contrário, dependendo da ordem entre o valor recebido e do nó, será inserido ou a direita ou à esquerda do nó atual recursivamente, fazendo logo após o rebalanceamento desse nó e então retornado. Se o valor for igual ao nó analisado, é retornado o próprio, não realizando nenhuma inserção.
 
-
--Função altura
+### Função altura
 
-altura :: (Ord a, Eq a) => TreeAvl a -> Int
+    altura :: (Ord a, Eq a) => TreeAvl a -> Int**==
 
 A função altura recebe um valor do tipo TreeAvl e retorna um valor do tipo Int.
 Essa função irá calcular a altura do nó junto com seus subnós, realizando assim também, o cálculo da altura de uma árvore avl.
 Caso se recebe o Vazio é retornado 0.
 Caso contrário, é retornado a soma de 1 com o maior valor das alturas dos filhos à esquerda e à esquerda.
 
--Função rebalance
+### Função rebalance
 
-rebalance :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
+    rebalance :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
+
+### Função remover
+
+    remover :: (Ord a, Eq a) => a -> TreeAvl a -> TreeAvl a
+
+### Função geraLista
+
+    geraLista :: (Ord a, Eq a) => TreeAvl a -> [a]
+
+A função geraLista recebe um valor do tipo TreeAvl e retorna uma lista do tipo genérico a.
+Essa função irá retornar os valores contidos na árvore AVL em formato de lista, partindo do valor que está mais à esquerda até o valor mais à direita, ou seja, irá retornar os valores em ordem de grandeza.
+Caso se receba um valor vazio, é retornado uma lista vazia.
+Caso contrário, é retornado a lista gerada pelo valor do nó atual com as concatenações das listas geradas recursivamentes dos filhos à esquerda e a direita.
+
+### Função menorValor
+
+    menorValor :: (Ord a, Eq a) => TreeAvl a -> a
+
+A função menorValor recebe um valor do tipo TreeAvl e retorna um valor do tipo genérico a.
+Essa função irá retornar o menor valor contido em um nó, sendo utilizada a função geraLista para recolher os valores desse nó e então usado a função head para pegar pegar o primeiro valor dessa lista, que é o menor de todos os valores.
+
+### Função geraAVL
+
+    geraAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a-
+
+A função geraAVL recebe um valor do tipo TreeAvl e uma lista do tipo genérico a.
+Essa função irá inserir na árvore os valores contidos na lista.
+Caso se receba uma lista vazia, é retornada a árvore sem modificação.
+Caso contrário, ...
+
+### Função removerAVL
+
+    removerAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a
+
+A função removerAVL recebe um valor do tipo TreeAvl e uma lista do tipo genérico a.
+Essa função irá remover da árvore os valores contidos na lista, desde que estes estejam na árvore.
+Caso se receba uma lista vazia, é retornada a árvore sem modificação.
+Caso contrário, ….
+
+## 3 - Como gerar uma árvore
+
+Para criar uma árvore, use a seguinte sintaxe no ghci:
 
 
--Função remover
+## 4 - Exemplos do uso
 
-remover :: (Ord a, Eq a) => a -> TreeAvl a -> TreeAvl a
 
--Função menorValor
 
-menorValor :: (Ord a, Eq a) => TreeAvl a -> a
-
--Função geraLista
-
-geraLista :: (Ord a, Eq a) => TreeAvl a -> [a]
-
--Função geraAVL
-
-geraAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a-
-
--Função removerAVL
-
-removerAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a
-
+```mermaid
+graph TD
+Raquel --> Jefferson
+Raquel --> Vanessa
+Jefferson --> Débora
+Jefferson --> Maria
+```

@@ -1,6 +1,3 @@
-import System.IO
-import Test.QuickCheck
-
 ----Código da Arvore AVL----
 data TreeAvl a = Vazio | No (TreeAvl a) a (TreeAvl a)
                  deriving (Show, Eq, Ord)
@@ -14,11 +11,11 @@ busca x (No l c r) | x == c = True
 valor :: (Ord a, Eq a) => TreeAvl a -> a --Obtem o valor de filho
 valor (No l c r) = c
 
-esquerda :: (Ord a, Eq a) => TreeAvl a-> TreeAvl a--Obtem o nó a esquerda
+esquerda :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a--Obtem o nó a esquerda
 esquerda Vazio = Vazio
 esquerda (No l c r) = l
 
-direita :: (Ord a, Eq a) => TreeAvl a-> TreeAvl a--Obtem o nó a direita
+direita :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a--Obtem o nó a direita
 direita Vazio = Vazio
 direita (No l c r) = r
 
@@ -46,13 +43,13 @@ rotacaoRL (No l c r) = No (No l c (esquerda (esquerda r)))
                           (valor (esquerda r))
                           (No (direita (esquerda r)) (valor r) (direita r))
 
-inserir :: (Ord a, Eq a) => a -> TreeAvl a-> TreeAvl a
+inserir :: (Ord a, Eq a) => a -> TreeAvl a -> TreeAvl a
 inserir x Vazio = No Vazio x Vazio
 inserir x (No l c r) | x < c = rebalance(No (inserir x l) c r)
                      | x > c = rebalance(No l c (inserir x r))
                      | otherwise = (No l c r)
 
-altura :: (Ord a, Eq a) => TreeAvl a-> Int
+altura :: (Ord a, Eq a) => TreeAvl a -> Int
 altura Vazio      = 0 -- Se vazio, altura é 0
 altura (No l c r) = 1 + (max (altura l) (altura r)) -- Se for um nó, somar um com a maior altura dos filhos
 
@@ -89,22 +86,19 @@ remover x (No l c r)         | x == c = rebalance(No l c' r')
                                where c' = menorValor r
                                      r' = remover c' r
 
-menorValor :: (Ord a, Eq a) => TreeAvl a -> a
-menorValor avl = head(geraLista avl)
-
 geraLista :: (Ord a, Eq a) => TreeAvl a -> [a]
 geraLista Vazio = []
 geraLista (No l c r) = geraLista l ++ [c] ++ geraLista r
 
-----Testes da Arvore AVL----
+menorValor :: (Ord a, Eq a) => TreeAvl a -> a
+menorValor avl = head(geraLista avl)
+
+----Manipulacao da Arvore AVL----
 
 geraAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a-- Gera uma Arvore AVL a partir de uma lista
 geraAVL avl [] = avl
 geraAVL avl (x:xs) = inserir x (geraAVL avl xs)
 
-
 removerAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a-- Remove valores de uma AVL a partir de uma lista
 removerAVL avl [] = avl
 removerAVL avl (x:xs) = remover x (removerAVL avl xs)
-
-----------------------------------

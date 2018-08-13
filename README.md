@@ -192,19 +192,46 @@ Caso se receba uma lista vazia, é retornada a árvore sem modificação.
 
 Caso contrário, é chamada a função remover e é passado o primeiro elemento da lista com a arvore gerada recursivamente da árvore recebida com o restante da lista.
 
-## 3 - Como gerar uma árvore
+## 3 - Manipulando a árvore AVL
 
 Para criar uma árvore, use a seguinte sintaxe no ghci:
+
+    Prelude> arvore = geraAVL Vazio [--Conteúdo da lista--]
+
+Para imprimir o conteúdo da árvore, use a seguinte sintaxe no ghci:
+
+    Prelude> print arvore
+
+Para verificar se um valor está na arvore, use a seguinte sintaxe no ghci:
+
+    Prelude> busca valor arvore
+
+Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
+
+    Prelude> removerAVL arvore [--Conteúdo da lista--] 
 
 
 ## 4 - Exemplos do uso
 
+Inserindo os valores (4, 6, 35, 2, 8) em uma nova árvore:
 
+    Prelude> arvore = geraAVL Vazio [4,6,35,2,8]
+    Prelude> print arvore
+    No (No (No Vazio 2 Vazio) 4 (No Vazio 6 Vazio)) 8 (No Vazio 35 Vazio)
+    
+Inserindo os valores (0, 8, 100, -95) em arvore
+
+
+Inserindo os valores ("Vanessa", "Maria", "Debora" ) em uma nova árvore:
+
+    Prelude> nomes = geraAVL Vazio ["Vanessa", "Debora", "Maria", "Raquel", "Jefferson"]
+    Prelude> print nomes
+    No (No (No Vazio "Debora" Vazio) "Jefferson" Vazio) "Maria" (No Vazio "Raquel" (No Vazio "Vanessa" Vazio))
 
 ```mermaid
 graph TD
-Raquel --> Jefferson
+Maria --> Jefferson
 Raquel --> Vanessa
 Jefferson --> Débora
-Jefferson --> Maria
+Maria --> Raquel
 ```

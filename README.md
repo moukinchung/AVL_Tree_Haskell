@@ -219,6 +219,10 @@ Inserindo os valores (4, 6, 35, 2, 8) em uma nova árvore:
     Prelude> print arvore
     No (No (No Vazio 2 Vazio) 4 (No Vazio 6 Vazio)) 8 (No Vazio 35 Vazio)
     
+![imagem_de_arvore](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore.png)
+
+###### Representação ilustrativa de arvore
+
 Inserindo os valores (0, 8, 100, -95) em arvore
 
 
@@ -229,4 +233,5 @@ Inserindo os valores ("Vanessa", "Maria", "Debora" ) em uma nova árvore:
     No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
 
 ![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)
-Representação ilustrativa de nomes
+
+###### Representação ilustrativa de nomes

@@ -208,27 +208,27 @@ Para usar a implementação, entre dentro da pasta principal e abra o Terminal d
 
 Para criar uma árvore, use a seguinte sintaxe no ghci:
 
-    Prelude> arvore = geraAVL Vazio [--Conteúdo da lista--]
+    Main> arvore = geraAVL Vazio [--Conteúdo da lista--]
 
 Para imprimir o conteúdo da árvore, use a seguinte sintaxe no ghci:
 
-    Prelude> print arvore
+    Main> print arvore
 
 Para verificar se um valor está na arvore, use a seguinte sintaxe no ghci:
 
-    Prelude> busca valor arvore
+    Main> busca valor arvore
 
 Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
 
-    Prelude> removerAVL arvore [--Conteúdo da lista--] 
+    Main> removerAVL arvore [--Conteúdo da lista--] 
 
 
 ## 4 - Exemplos do uso
 
 - Inserindo os valores (4, 6, 35, 2, 8) em uma nova árvore:
 
-        Prelude> arvore = geraAVL Vazio [4,6,35,2,8]
-        Prelude> print arvore
+        Main> arvore = geraAVL Vazio [4,6,35,2,8]
+        Main> print arvore
         No (No (No Vazio 2 Vazio) 4 (No Vazio 6 Vazio)) 8 (No Vazio 35 Vazio)
     
     ![imagem_de_arvore](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/arvore.png)
@@ -245,8 +245,8 @@ Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
 
 - Inserindo os valores ("Maria", "Jefferson", "Vanessa", "Raquel", "Debora") em uma nova árvore nomes:
 
-        Prelude> nomes = geraAVL Vazio ["Maria", "Jefferson", "Vanessa", "Raquel", "Debora"]
-        Prelude> print nomes
+        Main> nomes = geraAVL Vazio ["Maria", "Jefferson", "Vanessa", "Raquel", "Debora"]
+        Main> print nomes
         No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
 
     ![imagem_da_arvore_nomes](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png)
@@ -254,8 +254,8 @@ Para remover o conteúdo da lista, use a seguinte sintaxe no ghci:
 
 - Removendo os valores ("Raquel", "Jefferson") de nomes:
         
-        Prelude> nomes1 = removerAVL nomes ["Raquel", "Jefferson"]
-        Prelude> print nomes1
+        Main> nomes1 = removerAVL nomes ["Raquel", "Jefferson"]
+        Main> print nomes1
         No (No Vazio "Debora" Vazio) "Maria" (No Vazio "Vanessa" Vazio)
         
      ![imagem_da_arvore_nomes1](https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes1.png)

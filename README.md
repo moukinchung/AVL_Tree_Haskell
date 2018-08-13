@@ -170,7 +170,7 @@ Essa função irá retornar o menor valor contido em um nó, sendo utilizada a f
 
 ### Função geraAVL
 
-    geraAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a-
+    geraAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a
 
 A função geraAVL recebe um valor do tipo TreeAvl e uma lista do tipo genérico a.
 

@@ -253,7 +253,7 @@ Para remover o conteúdo de arvore, use o seguinte comando no ghci:
 
         Main> nomes = geraAVL Vazio ["Maria", "Jefferson", "Vanessa", "Raquel", "Debora"]
         Main> print nomes
-        No (No Vazio "Debora" Vazio) "Jefferson" (No (No Vazio "Maria" Vazio) "Raquel" (No Vazio "Vanessa" Vazio))
+        No (No (No Vazio "Debora" Vazio) "Jefferson" (No Vazio "Maria" Vazio)) "Raquel" (No Vazio "Vanessa" Vazio)
 
     <figure>
         <img src='https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/nomes.png' alt='missing' />

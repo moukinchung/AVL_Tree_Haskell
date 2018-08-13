@@ -12,7 +12,7 @@ Uma árvore é considerada balanceada se a partir do nó principal, a altura dos
 
 ## 2 - A implementação em Haskell
 
-### O Tipo
+### O tipo
 
 Para a implementação na linguagem Haskell, foi criado um novo tipo de dado para representar o nó do elemento com seus dois filhos, além de também poder representar o nó vazio:
 
@@ -23,7 +23,7 @@ Para a implementação na linguagem Haskell, foi criado um novo tipo de dado par
 
     busca :: (Ord a, Eq a) => a -> TreeAvl a -> Bool
 
-A função busca recebe um valor do tipo genérico *a* e um valor do tipo **TreeAvl**, e retorna um **bool**.
+A função *busca* recebe um valor do tipo genérico *a* e um valor do tipo **TreeAvl**, e retorna um **bool**.
 
 Essa função irá realizar a busca do valor na árvore.
 
@@ -35,14 +35,14 @@ Caso contrário, se o valor a ser procurado é igual ao nó, é retornado **True
 
     valor :: (Ord a, Eq a) => TreeAvl a -> a
 
-A função valor recebe um valor do tipo **TreeAvl** e retorna um valor do tipo genérico **a**.
+A função *valor* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo genérico **a**.
 
 O valor retornado é o do nó recebido.
 
 ### Função esquerda
 
     esquerda :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
-A função esquerda recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
+A função *esquerda* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Caso recebam um **Vazio**, é retornado um **Vazio**.
 
@@ -52,7 +52,7 @@ Caso contrário, é retornado o nó à esquerda.
 
     direita :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função direita recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
+A função *direita* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Caso recebam um **Vazio**, é retornado um **Vazio**.
 
@@ -62,7 +62,7 @@ Caso contrário, é retornado o nó à direita.
 
     rotacaoLL :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rotacaoLL recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
+A função *rotacaoLL* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá executar a rotação LL, ou seja, a rotação simples à direita.
 
@@ -76,7 +76,7 @@ Caso contrário, irá retornar o nó rotacionado.
 
     rotacaoRR :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rotacaoRR recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
+A função *rotacaoRR* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá executar a rotação RR, ou seja, a rotação simples à esquerda.
 
@@ -90,7 +90,7 @@ Caso contrário, irá retornar o nó rotacionado.
 
     rotacaoLR :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rotacaoLR recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
+A função *rotacaoLR* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá executar a rotação LR, ou seja, a rotação dupla à direita.
 
@@ -104,7 +104,7 @@ Caso contrário, irá retornar o nó rotacionado.
 
     rotacaoRL :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rotacaoRL recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
+A função *rotacaoRL* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá executar a rotação RL, ou seja, a rotação dupla à esquerda.
 
@@ -118,7 +118,7 @@ Caso contrário, irá retornar o nó rotacionado.
 
     inserir :: (Ord a, Eq a) => a -> TreeAvl a -> TreeAvl a
 
-A função inserir recebe um valor do tipo genérico **a** e um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
+A função *inserir* recebe um valor do tipo genérico **a** e um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá inserir o valor recebido na árvore.
 
@@ -132,7 +132,7 @@ Se o valor for igual ao nó analisado, é retornado o próprio, não realizando 
 
     altura :: (Ord a, Eq a) => TreeAvl a -> Int**==
 
-A função altura recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **Int**.
+A função *altura* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo **Int**.
 
 Essa função irá calcular a altura do nó junto com seus subnós, realizando assim também, o cálculo da altura de uma árvore avl.
 
@@ -144,7 +144,7 @@ Caso contrário, é retornado a soma de 1 com o maior valor das alturas dos filh
 
     rebalance :: (Ord a, Eq a) => TreeAvl a -> TreeAvl a
 
-A função rebalance irá receber um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
+A função *rebalance* irá receber um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função irá chamar as funções de rotação caso necessário.
 
@@ -152,7 +152,7 @@ Essa função irá chamar as funções de rotação caso necessário.
 
     remover :: (Ord a, Eq a) => a -> TreeAvl a -> TreeAvl a
 
-A função remover irá receber um valor do tipo genérico **a** e um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
+A função *remover* irá receber um valor do tipo genérico **a** e um valor do tipo **TreeAvl** e retorna um valor do tipo **TreeAvl**.
 
 Essa função ira remover o valor na arvore caso esse se encontre, se não irá devolver a árvore intacta.
 
@@ -160,7 +160,7 @@ Essa função ira remover o valor na arvore caso esse se encontre, se não irá 
 
     geraLista :: (Ord a, Eq a) => TreeAvl a -> [a]
 
-A função geraLista recebe um valor do tipo **TreeAvl** e retorna uma lista do tipo genérico **a**.
+A função *geraLista* recebe um valor do tipo **TreeAvl** e retorna uma lista do tipo genérico **a**.
 
 Essa função irá retornar os valores contidos na árvore AVL em formato de lista, partindo do valor que está mais à esquerda até o valor mais à direita, ou seja, irá retornar os valores em ordem de grandeza.
 
@@ -172,15 +172,15 @@ Caso contrário, é retornado a lista gerada pelo valor do nó atual com as conc
 
     menorValor :: (Ord a, Eq a) => TreeAvl a -> a
 
-A função menorValor recebe um valor do tipo **TreeAvl** e retorna um valor do tipo genérico **a**.
+A função *menorValor* recebe um valor do tipo **TreeAvl** e retorna um valor do tipo genérico **a**.
 
-Essa função irá retornar o menor valor contido em um nó, sendo utilizada a função **geraLista** para recolher os valores desse nó e então usado a função **head** para pegar pegar o primeiro valor dessa lista, que é o menor de todos os valores.
+Essa função irá retornar o menor valor contido em um nó, sendo utilizada a função *geraLista* para recolher os valores desse nó e então usado a função *head* para pegar pegar o primeiro valor dessa lista, que é o menor de todos os valores.
 
 ### Função geraAVL
 
     geraAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a
 
-A função geraAVL recebe um valor do tipo **TreeAvl** e uma lista do tipo genérico **a**.
+A função *geraAVL* recebe um valor do tipo **TreeAvl** e uma lista do tipo genérico **a**.
 
 Essa função irá inserir na árvore os valores contidos na lista.
 
@@ -192,7 +192,7 @@ Caso contrário, é chamada a função inserir e é passado o primeiro elemento 
 
     removerAVL :: (Ord a, Eq a) => TreeAvl a -> [a] -> TreeAvl a
 
-A função removerAVL recebe um valor do tipo **TreeAvl** e uma lista do tipo genérico **a**.
+A função *removerAVL* recebe um valor do tipo **TreeAvl** e uma lista do tipo genérico **a**.
 
 Essa função irá remover da árvore os valores contidos na lista, desde que estes estejam na árvore.
 

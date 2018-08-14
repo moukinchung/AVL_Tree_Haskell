@@ -4,6 +4,27 @@
 
 [**2 - A implementação em Haskell**](https://github.com/moukinchung/AVL_Tree_Haskell#2---a-implementa%C3%A7%C3%A3o-em-haskell)
 
+  [**- O tipo**]
+  
+  [**- Função busca**]
+  
+  [**- Função valor**]
+  
+  [**- Função esquerda**]
+  
+  [**- Função direita**]
+  
+  [**- Função rotacaoLL**]
+  
+  [**- Função rotacaoRR**]
+  
+  [**- Função rotacaoLR**]
+  
+  [**- Função rotacaoRL**]
+  
+  [**- Função inserir**]
+  
+  
 [**3 - Manipulando a árvore AVL**](https://github.com/moukinchung/AVL_Tree_Haskell#3---manipulando-a-%C3%A1rvore-avl)
 
 [**4 - Exemplos do uso**](https://github.com/moukinchung/AVL_Tree_Haskell#4---exemplos-do-uso)

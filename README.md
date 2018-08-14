@@ -4,26 +4,39 @@
 
 [**2 - A implementação em Haskell**](https://github.com/moukinchung/AVL_Tree_Haskell#2---a-implementa%C3%A7%C3%A3o-em-haskell)
 
-  [**- O tipo**](https://github.com/moukinchung/AVL_Tree_Haskell#o-tipo)
+   [- O tipo](https://github.com/moukinchung/AVL_Tree_Haskell#o-tipo)
+   
+   [- Função busca](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-busca)
   
-  [**- Função busca**](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-busca)
+   [- Função valor](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-valor)
   
-  [**- Função valor**](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-valor)
+   [- Função esquerda](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-esquerda)
   
-  [**- Função esquerda**](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-esquerda)
+   [- Função direita](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-direita)
   
-  [**- Função direita**](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-direita)
+   [- Função rotacaoLL](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rotacaoll)
   
-  [**- Função rotacaoLL**](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rotacaoll)
+   [- Função rotacaoRR](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rotacaorr)
   
-  [**- Função rotacaoRR**](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rotacaorr)
+   [- Função rotacaoLR](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rotacaolr)
   
-  [**- Função rotacaoLR**](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rotacaolr)
+   [- Função rotacaoRL](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rotacaorl)
   
-  [**- Função rotacaoRL**](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rotacaorl)
+   [- Função inserir](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-inserir)
   
-  [**- Função inserir**](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-inserir)
-  
+   [- Função altura](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-altura)
+   
+   [-Função rebalance](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rebalance)
+   
+   [-Função remover](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-remover)
+   
+   [-Função geraLista](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-geralista)
+   
+   [-Função menorValor](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-menorvalor)
+   
+   [-Função geraAVL](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-geraavl)
+   
+   [-Função removerAVL](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-removeravl)
   
 [**3 - Manipulando a árvore AVL**](https://github.com/moukinchung/AVL_Tree_Haskell#3---manipulando-a-%C3%A1rvore-avl)
 

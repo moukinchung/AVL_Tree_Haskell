@@ -26,17 +26,17 @@
   
    [- Função altura](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-altura)
    
-   [-Função rebalance](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rebalance)
+   [- Função rebalance](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-rebalance)
    
-   [-Função remover](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-remover)
+   [- Função remover](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-remover)
    
-   [-Função geraLista](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-geralista)
+   [- Função geraLista](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-geralista)
    
-   [-Função menorValor](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-menorvalor)
+   [- Função menorValor](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-menorvalor)
    
-   [-Função geraAVL](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-geraavl)
+   [- Função geraAVL](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-geraavl)
    
-   [-Função removerAVL](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-removeravl)
+   [- Função removerAVL](https://github.com/moukinchung/AVL_Tree_Haskell#fun%C3%A7%C3%A3o-removeravl)
   
 [**3 - Manipulando a árvore AVL**](https://github.com/moukinchung/AVL_Tree_Haskell#3---manipulando-a-%C3%A1rvore-avl)
 

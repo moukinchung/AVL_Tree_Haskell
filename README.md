@@ -1,8 +1,11 @@
 # **Árvore AVL - Implementação em Haskell**
 
 [**1 - Conceitualização**](https://github.com/moukinchung/AVL_Tree_Haskell#1---conceitualiza%C3%A7%C3%A3o)
+
 [**2 - A implementação em Haskell**](https://github.com/moukinchung/AVL_Tree_Haskell#2---a-implementa%C3%A7%C3%A3o-em-haskell)
+
 [**3 - Manipulando a árvore AVL**](https://github.com/moukinchung/AVL_Tree_Haskell#3---manipulando-a-%C3%A1rvore-avl)
+
 [**4 - Exemplos do uso**](https://github.com/moukinchung/AVL_Tree_Haskell#4---exemplos-do-uso)
 
 ## 1 - Conceitualização

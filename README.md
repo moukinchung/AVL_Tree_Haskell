@@ -1,7 +1,5 @@
 # **Árvore AVL - Implementação em Haskell**
 
-https://github.com/moukinchung/AVL_Tree_Haskell/blob/master/README.md#1---conceitualiza%C3%A7%C3%A3o
-
 ## 1 - Conceitualização
 
 A Árvore Adelson-Velskii e Landis (AVL) é uma árvore de busca binária balanceada que minimiza o número de comparações efetuadas no pior caso para uma busca nessa árvore.
